@@ -1,0 +1,39 @@
+{
+  "name": "react",
+  "version": "0.0.1",
+  "description": "perfromance app for react",
+  "main": "index.js",
+  "scripts": {
+    "flow": "flow",
+    "start": "flow && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/framework-performance/react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "lars wiedemann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/framework-performance/react/issues"
+  },
+  "homepage": "https://github.com/framework-performance/react#readme",
+  "devDependencies": {
+    "flow-bin": "^0.37.4",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^4.4.5",
+    "react-router": "^3.0.0",
+    "redux": "^3.5.2",
+    "redux-logger": "^2.7.4",
+    "redux-observable": "^0.12.2",
+    "rxjs": "^5.0.1"
+  },
+  "devDependencies": {
+    "react-scripts": "0.8.0"
+  }
+}
