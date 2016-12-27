@@ -22,7 +22,7 @@
     "url": "https://github.com/framework-performance/react/issues"
   },
   "homepage": "https://github.com/framework-performance/react#readme",
-  "devDependencies": {
+  "dependencies": {
     "flow-bin": "^0.37.4",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
@@ -31,9 +31,7 @@
     "redux": "^3.5.2",
     "redux-logger": "^2.7.4",
     "redux-observable": "^0.12.2",
-    "rxjs": "^5.0.1"
-  },
-  "devDependencies": {
+    "rxjs": "^5.0.1",
     "react-scripts": "0.8.0"
   }
 }
