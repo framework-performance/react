@@ -2,6 +2,17 @@ import React from "react";
 import Node from '../node';
 
 class Tree extends React.PureComponent {
+
+    shouldComponentUpdate(nextProps) {
+        if (nextProps.nodes !== this.props.nodes) {
+            return true;
+        }
+        if (nextProps.showAnimation !== this.props.showAnimation) {
+            return true;
+        }
+        return false;
+    }
+
     selectNode(nodePath = [], index = 0) {
         this.props.onSelectTreeNode([...nodePath, index]);
     };
@@ -15,11 +26,11 @@ class Tree extends React.PureComponent {
                         <Node
                             showAnimation={showAnimation}
                             node={node}
-                            onSelectNode={(path) => this.selectNode(path,index)} />
+                            onSelectNode={(path) => this.selectNode(path,index)}/>
                         <Tree
                             showAnimation={showAnimation}
                             nodes={node.nodes}
-                            onSelectTreeNode={(path) => this.selectNode(path,index)} />
+                            onSelectTreeNode={(path) => this.selectNode(path,index)}/>
                     </li>
                 })}
             </ul>

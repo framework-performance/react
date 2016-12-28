@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {treeActions} from '../actions';
 import Tree from '../components/tree';
 
-class BasicContainer extends React.PureComponent {
+class TreeContainer extends React.PureComponent {
 
     selectNode(path) {
         this.props.setSelectedNodePath(path);
@@ -16,13 +16,12 @@ class BasicContainer extends React.PureComponent {
                 <Tree nodes={nodes}
                       showAnimation={showAnimation}
                       onSelectTreeNode={this.selectNode.bind(this)}/>
-                Basic Tree
             </div>
         );
     }
 }
 
-BasicContainer.propTypes = {
+TreeContainer.propTypes = {
     nodes: PropTypes.array,
     showAnimation: PropTypes.bool.isRequired,
     setSelectedNodePath: PropTypes.func.isRequired
@@ -41,4 +40,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BasicContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(TreeContainer);

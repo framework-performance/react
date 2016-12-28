@@ -4,16 +4,16 @@ import App from "./app";
 import Store from "./store";
 import {Provider} from "react-redux";
 import {Router, Route, browserHistory} from "react-router";
-import Basic from './containers/basic.component';
+import TreeComponent from './containers/tree.component';
 const store = Store();
 
 ReactDOM.render(
-<Provider store={store}>
-    <Router history={browserHistory}>
-    <Route path="/" component={App}>
-        <Route path="/simple" component={Basic}/>
-    </Route>
-    </Router>
+    <Provider store={store}>
+        <Router history={browserHistory}>
+            <Route path="/" component={App}>
+                <Route path="/tree" component={TreeComponent}/>
+            </Route>
+        </Router>
     </Provider>,
     document.getElementById('root')
 );

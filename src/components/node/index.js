@@ -2,6 +2,16 @@ import React from "react";
 
 class Node extends React.PureComponent {
 
+    shouldComponentUpdate(nextProps) {
+        if (nextProps.node !== this.props.node) {
+            return true;
+        }
+        if (nextProps.showAnimation !== this.props.showAnimation) {
+            return true;
+        }
+        return false;
+    }
+
     selectNode = () => {
         this.props.onSelectNode([]);
     };
