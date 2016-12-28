@@ -1,8 +1,26 @@
-.node{
-    margin-top:5px;
-    padding:5px 5px 5px 20px;
+.node {
+    margin-top: 5px;
+    padding: 5px 5px 5px 20px;
     border: 2px solid;
     background-color: #7db9e8;
-    color:white;
+    color: white;
     border-radius: 25px;
+
+}
+
+.slide {
+    animation: animateleft 0.4s
+}
+
+@keyframes animateleft {
+    from {
+        transform: translate(-100%);
+        left: -300px;
+        opacity: 0
+    }
+    to {
+        transform: translate(0%);
+        left: 0;
+        opacity: 1
+    }
 }

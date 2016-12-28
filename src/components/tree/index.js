@@ -14,6 +14,7 @@ class Tree extends React.PureComponent {
         return false;
     }
 
+
     render() {
         const {nodes, showAnimation,onSelectTreeNode} = this.props;
         return (

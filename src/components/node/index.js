@@ -1,4 +1,6 @@
 import React from "react";
+const classNames = require('classnames');
+
 import './node.css';
 
 class Node extends React.PureComponent {
@@ -15,11 +17,19 @@ class Node extends React.PureComponent {
 
     render() {
         const {
-            node,
-            onSelectNode
-        }   = this.props;
+                node,
+                onSelectNode,
+                showAnimation
+            }   = this.props,
+            className = classNames({
+                'node': true,
+                'slide': showAnimation
+            });
+
         return (
-            <div className="node" onClick={() => onSelectNode([])}>{node.value}</div>
+            <div key={node.value}
+                 className={className}
+                 onClick={() => onSelectNode([])}>{node.value}</div>
         );
     }
 }
