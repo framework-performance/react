@@ -13,20 +13,16 @@ class Node extends React.PureComponent {
         return false;
     }
 
-    selectNode = () => {
-        this.props.onSelectNode([]);
-    };
-
     render() {
         const {
-            node
+            node,
+            onSelectNode
         }   = this.props;
         return (
-            <div className="node" onClick={this.selectNode}>{node.value}</div>
+            <div className="node" onClick={() => onSelectNode([])}>{node.value}</div>
         );
     }
 }
-
 
 Node.propTypes = {
     node: React.PropTypes.object.isRequired,

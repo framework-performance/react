@@ -14,12 +14,8 @@ class Tree extends React.PureComponent {
         return false;
     }
 
-    selectNode(nodePath = [], index = 0) {
-        this.props.onSelectTreeNode([...nodePath, index]);
-    };
-
     render() {
-        const {nodes, showAnimation} = this.props;
+        const {nodes, showAnimation,onSelectTreeNode} = this.props;
         return (
             <ul className="tree">
                 {nodes.map((node, index) => {
@@ -27,11 +23,11 @@ class Tree extends React.PureComponent {
                         <Node
                             showAnimation={showAnimation}
                             node={node}
-                            onSelectNode={(path) => this.selectNode(path,index)}/>
+                            onSelectNode={(path) => onSelectTreeNode([...path, index])}/>
                         <Tree
                             showAnimation={showAnimation}
                             nodes={node.nodes}
-                            onSelectTreeNode={(path) => this.selectNode(path,index)}/>
+                            onSelectTreeNode={(path) => onSelectTreeNode([...path, index])}/>
                     </li>
                 })}
             </ul>

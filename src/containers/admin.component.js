@@ -10,26 +10,19 @@ class AdminContainer extends React.PureComponent {
         this.props.load();
     }
 
-    changeTree(event) {
-        this.props.load(event.target.value);
-    }
-
-    updateNodeValue(value: string) {
-        this.props.updateNodeValue(value);
-    }
-
     render() {
-        const {selectedNode} = this.props;
+        const {selectedNode, nodesCount, updateNodeValue, load} = this.props;
         let editNode = selectedNode
-            ? <EditNode node={selectedNode} onUpdateNode={this.updateNodeValue.bind(this)}/>
+            ? <EditNode node={selectedNode} onUpdateNode={ (value) => updateNodeValue(value)}/>
             : null;
         return (
             <div>
-                <select onChange={this.changeTree.bind(this)}>
+                <select onChange={(event) => load(event.target.value)}>
                     {Object.keys(treeFiles).map((file) => {
                         return <option key={file} value={file}>{file}</option>
                     })}
                 </select>
+                Nodes {nodesCount}
                 {editNode}
             </div>
         );

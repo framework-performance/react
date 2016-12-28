@@ -5,17 +5,13 @@ import Tree from '../components/tree';
 
 class TreeContainer extends React.PureComponent {
 
-    selectNode(path) {
-        this.props.setSelectedNodePath(path);
-    }
-
     render() {
-        const {nodes, showAnimation} = this.props;
+        const {nodes, showAnimation, setSelectedNodePath} = this.props;
         return (
             <div>
                 <Tree nodes={nodes}
                       showAnimation={showAnimation}
-                      onSelectTreeNode={this.selectNode.bind(this)}/>
+                      onSelectTreeNode={(path) => setSelectedNodePath(path)}/>
             </div>
         );
     }
