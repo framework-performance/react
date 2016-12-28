@@ -1,4 +1,5 @@
 import React from "react";
+import './node.css';
 
 class Node extends React.PureComponent {
 
@@ -21,7 +22,7 @@ class Node extends React.PureComponent {
             node
         }   = this.props;
         return (
-            <div onClick={this.selectNode}>{node.value}</div>
+            <div className="node" onClick={this.selectNode}>{node.value}</div>
         );
     }
 }

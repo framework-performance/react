@@ -1,4 +1,5 @@
 import React from "react";
+import './edit-node.component.css';
 
 class EditNode extends React.PureComponent {
 
@@ -10,7 +11,7 @@ class EditNode extends React.PureComponent {
 
         const {node} = this.props;
         return (
-            <div >
+            <div className="editor">
                 <h4>edit Node</h4>
                 <input value={node.value} onChange={this.updateNodeValue.bind(this)}/>
             </div>

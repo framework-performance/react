@@ -1,5 +1,6 @@
 import React from "react";
 import Node from '../node';
+import './tree.css';
 
 class Tree extends React.PureComponent {
 
@@ -20,7 +21,7 @@ class Tree extends React.PureComponent {
     render() {
         const {nodes, showAnimation} = this.props;
         return (
-            <ul>
+            <ul className="tree">
                 {nodes.map((node, index) => {
                     return <li key={index}>
                         <Node
