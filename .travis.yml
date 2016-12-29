@@ -1,0 +1,21 @@
+language: node_js
+cache:
+  yarn: true
+  directories:
+    - node_modules
+node_js:
+  - "node"
+before_install:
+  - npm i -g makeshift && makeshift -s @bcoe -r https://registry.npmjs.org
+  - npm install -g yarn --cache-min 999999999
+
+install:
+    - yarn install
+script:
+    - npm run build-production
+deploy:
+  provider: npm
+  email: larswiedemann@gmx.net
+  api_key: $NPM_TOKEN
+  on:
+    tags: true

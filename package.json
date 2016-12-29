@@ -1,7 +1,7 @@
 {
-  "name": "react",
+  "name": "performance-react",
   "version": "0.0.1",
-  "description": "perfromance app for react",
+  "description": "performance app for react",
   "main": "index.js",
   "scripts": {
     "flow": "flow",
@@ -14,7 +14,11 @@
     "url": "git+https://github.com/framework-performance/react.git"
   },
   "keywords": [
-    "react"
+    "react",
+    "redux"
+  ],
+  "files": [
+    "build/*.*"
   ],
   "author": "lars wiedemann",
   "license": "ISC",
@@ -34,5 +38,9 @@
     "redux-logger": "^2.7.4",
     "redux-observable": "^0.12.2",
     "rxjs": "^5.0.1"
+  },
+  "devDependencies" : {
+    "standard-version": "^2.4.0",
+    "makeshift": "^1.0.0"
   }
 }

@@ -59,7 +59,7 @@ export class TreeEpic {
 
     getFileForType(type: string = ''): string {
         try {
-            return this.getTreeFileObject(type).file;
+            return 'tree-data/' + this.getTreeFileObject(type).file;
         } catch (error) {
             console.error('load tree.json failed', error);
         }
