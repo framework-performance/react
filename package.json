@@ -1,6 +1,6 @@
 {
   "name": "performance-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "performance app for react",
   "main": "index.js",
   "scripts": {
@@ -40,7 +40,7 @@
     "redux-observable": "^0.12.2",
     "rxjs": "^5.0.1"
   },
-  "devDependencies" : {
+  "devDependencies": {
     "standard-version": "^2.4.0",
     "makeshift": "^1.0.0"
   }
