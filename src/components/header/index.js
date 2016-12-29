@@ -1,15 +1,14 @@
 import React from "react";
-
-import {Link} from 'react-router'
+import './header.css';
 
 function Header() {
     return (
-        <div>
-            <h1>React performance</h1>
-            <nav>
-                <Link to="/tree" activeClassName="active">Tree</Link>
-            </nav>
-        </div>
+        <header>
+            <h1>
+                <a href="https://framework-performance.github.io/blog/">framework performance</a>
+            </h1>
+            <h2>React</h2>
+        </header>
     );
 }
 

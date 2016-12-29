@@ -1,0 +1,16 @@
+header {
+    background-color: #F5F5F5;
+    padding: 10px;
+    margin: 0 0 20px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+

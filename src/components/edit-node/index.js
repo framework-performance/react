@@ -12,8 +12,7 @@ class EditNode extends React.PureComponent {
         const {node} = this.props;
         return (
             <div className="editor">
-                <h4>edit Node</h4>
-                <input value={node.value} onChange={this.updateNodeValue.bind(this)}/>
+                <input type="text" value={node.value} onChange={this.updateNodeValue.bind(this)}/>
             </div>
         );
     }

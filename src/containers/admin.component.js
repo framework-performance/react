@@ -22,7 +22,8 @@ class AdminContainer extends React.PureComponent {
                         return <option key={file} value={file}>{file}</option>
                     })}
                 </select>
-                Nodes {nodesCount}
+                <p>Nodes {nodesCount}</p>
+                <p>click on Node for edit</p>
                 {editNode}
             </div>
         );
