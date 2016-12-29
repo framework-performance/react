@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/framework-performance/react/issues"
   },
-  "homepage": "https://framework-performance.github.io/blog/react/",
+  "homepage": "https://framework-performance.github.io/framework-performance/react/",
   "dependencies": {
     "classnames": "^2.2.5",
     "flow-bin": "^0.37.4",

@@ -5,7 +5,7 @@ function Header() {
     return (
         <header>
             <h1>
-                <a href="https://framework-performance.github.io/blog/">framework performance</a>
+                <a href="https://framework-performance.github.io/framework-performance/">framework performance</a>
             </h1>
             <h2>React</h2>
         </header>
