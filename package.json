@@ -19,7 +19,7 @@
     "redux"
   ],
   "files": [
-    "build/*.*"
+    "build"
   ],
   "author": "lars wiedemann",
   "license": "ISC",
