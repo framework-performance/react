@@ -6,7 +6,7 @@
   "scripts": {
     "flow": "flow",
     "start": "flow && react-scripts start",
-    "build": "react-scripts build",
+    "build-production": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "release": "standard-version"
   },
