@@ -1,6 +1,6 @@
 {
   "name": "performance-react",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "performance app for react",
   "main": "index.js",
   "scripts": {
